@@ -48,3 +48,22 @@ export const ContentWrapper = styled.div`
         }
     }
 `
+
+export const UserInfoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    width: 12.5rem;
+    .userImageWrapper {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        .userImage {
+            font-size: 2.5rem;
+            color: #555758;
+        }
+    }
+    .userNameWrapper {
+        font-size: 1rem;
+        color: #555758;
+    }
+`

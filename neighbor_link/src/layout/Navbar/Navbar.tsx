@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, ContentWrapper } from './NavbarStyle.styles';
+import { Container, ContentWrapper, UserInfoContainer } from './NavbarStyle.styles';
 import getStandardName from '../../store/util/getStandardName';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const { pathname, state } = useLocation()
@@ -21,6 +21,12 @@ const Navbar = () => {
                     <input type="text" placeholder='Enter keyword to find a post' />
                 </div>
             </ContentWrapper>
+            <UserInfoContainer>
+                <div className="userImageWrapper">
+                    <FontAwesomeIcon icon={faCircleUser} className='userImage' />
+                </div>
+                <div className='userNameWrapper'>Leslie Alexander</div>
+            </UserInfoContainer>
         </Container>
     );
 };
